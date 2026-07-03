@@ -96,11 +96,11 @@ UnminedCustomMarkers = {
         {
             x: 345,
             z: 231,
-            image: "pin_light_blue.png",
+            image: "pin_cyan.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Ika&Aru",
-            textColor: "lightblue",
+            textColor: "cyan",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
