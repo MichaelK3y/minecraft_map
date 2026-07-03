@@ -69,7 +69,6 @@ UnminedCustomMarkers = {
             x: 1230,
             z: -1315,
             image: "pin_pink.png",
-            image: "pin_light_blue.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Koli",
