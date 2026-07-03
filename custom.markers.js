@@ -31,6 +31,20 @@ Use the imageScale property if the pin image is too large.
 
 */
 
+// Minecraft-style font for marker labels: Monocraft (https://github.com/IdreesInc/Monocraft, OFL license).
+// OpenLayers draws labels to canvas immediately, so the markers layer must be redrawn
+// once the font finishes loading, otherwise the fallback font stays on screen.
+if (typeof FontFace !== "undefined") {
+    new FontFace("Monocraft", "url('monocraft.ttf')").load().then(function (font) {
+        document.fonts.add(font);
+        try {
+            if (unmined && unmined.markersLayer) unmined.markersLayer.changed();
+        } catch (e) {
+            // map not created yet; it will render with the loaded font on its own
+        }
+    });
+}
+
 UnminedCustomMarkers = {
 
     isEnabled: true,
@@ -40,7 +54,7 @@ UnminedCustomMarkers = {
         {
             x: 330,
             z: -28,
-            image: "custom.pin.png",
+            image: "pin_yellow.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Spawn",
@@ -48,147 +62,147 @@ UnminedCustomMarkers = {
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: 1230,
             z: -1315,
-            image: "custom.pin.png",
+            image: "pin_light_blue.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Koli",
-            textColor: "yellow",
+            textColor: "lightblue",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: 893,
             z: -1885,
-            image: "custom.pin.png",
+            image: "pin_blue.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "morrelo",
-            textColor: "yellow",
+            textColor: "dodgerblue",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: 345,
             z: 231,
-            image: "custom.pin.png",
+            image: "pin_pink.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
-            text: "Ika & Aru",
-            textColor: "yellow",
+            text: "Ika&Aru",
+            textColor: "pink",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: -3223,
             z: -278,
-            image: "custom.pin.png",
+            image: "pin_lime.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Michael",
-            textColor: "yellow",
+            textColor: "limegreen",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: 4185,
             z: 4263,
-            image: "custom.pin.png",
+            image: "pin_red.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Simon",
-            textColor: "yellow",
+            textColor: "tomato",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: -1740,
             z: 595,
-            image: "custom.pin.png",
+            image: "pin_black.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "End",
-            textColor: "yellow",
+            textColor: "darkgrey",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: 3127,
             z: 5645,
-            image: "custom.pin.png",
+            image: "pin_gray.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Ancient City",
-            textColor: "yellow",
+            textColor: "lightslategray",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: 4223,
             z: 2899,
-            image: "custom.pin.png",
+            image: "pin_brown.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Mansion",
-            textColor: "yellow",
+            textColor: "peru",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: -2328,
             z: 6699,
-            image: "custom.pin.png",
+            image: "pin_brown.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Mansion",
-            textColor: "yellow",
+            textColor: "peru",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
         {
             x: -1949,
             z: 5876,
-            image: "custom.pin.png",
+            image: "pin_light_gray.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.25,
             text: "Pale Garden",
-            textColor: "yellow",
+            textColor: "lightgray",
             textStrokeColor: "rgba(0, 0, 0, 0.8)",
             textStrokeWidth: 3,
             offsetY: 10,
-            font: "bold 16px Arial",
+            font: "16px Monocraft, Arial",
         },
 
 
