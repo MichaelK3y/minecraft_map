@@ -119,6 +119,18 @@ UnminedCustomMarkers = {
             font: "bold 16px Arial",
         },
 
+        {
+            x: 1372,
+            z: -1333,
+            image: "custom.pin.png",
+            imageAnchor: [0.5, 1],
+            imageScale: 0.25,
+            text: "Mob farm",
+            textColor: "yellow",
+            offsetY: 10,
+            font: "bold 16px Arial",
+        },
+
 
 
 
