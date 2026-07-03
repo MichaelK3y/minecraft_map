@@ -181,8 +181,8 @@ class Unmined {
     static defaultOptions = {
         enableGrid: true,
         showGrid: true,
-        binaryGrid: true,
-        showScaleBar: true,
+        binaryGrid: false,
+        showScaleBar: false,
         denseGrid: false,
         showMarkers: true,
         showPlayers: true,
